@@ -30,12 +30,12 @@ stages:
     params:
       params.yaml:
         train.model_type: random_forest
-        train.n_estimators: 100
+        train.n_estimators: 50
     outs:
     - path: model.joblib
       hash: md5
-      md5: a1c0e3e989a2279e9163010bbbbabb01
-      size: 6322665
+      md5: 4830a02e854335b504f4b42b8f5bfa23
+      size: 3164073
   validate:
     cmd: python validate.py
     deps:
@@ -45,8 +45,8 @@ stages:
       size: 18511
     - path: model.joblib
       hash: md5
-      md5: a1c0e3e989a2279e9163010bbbbabb01
-      size: 6322665
+      md5: 4830a02e854335b504f4b42b8f5bfa23
+      size: 3164073
     - path: validate.py
       hash: md5
       md5: 754939517f9142d6b6065fe6e26db9c1
@@ -54,9 +54,9 @@ stages:
     outs:
     - path: metrics.json
       hash: md5
-      md5: 6613e5d2cd57e6c1e098b8677cf2c243
-      size: 64
+      md5: 29b39c1306430c2c276570691cf87b96
+      size: 63
     - path: predictions.csv
       hash: md5
-      md5: eb6fb5dc6994497912df8ccba2c09409
+      md5: a53b3d02ef4aeb087e7ad13233257324
       size: 1297
